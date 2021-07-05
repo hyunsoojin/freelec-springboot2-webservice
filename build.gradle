@@ -1,0 +1,35 @@
+buildscript{
+    ext{
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
+
+plugins{
+    id 'java'
+}
+
+group 'com.jinnysmain.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE')
+    testCompile('org.springframework.boot:spring-boot-starter-test:2.1.7.RELEASE')
+}
+
+test {
+    useJUnitPlatform()
+}
